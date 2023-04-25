@@ -1,5 +1,9 @@
 package com.ghadl.repository;
 
-public interface BagRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ghadl.entity.BagEntity;
+
+public interface BagRepository extends JpaRepository<BagEntity, Long>{
 
 }
