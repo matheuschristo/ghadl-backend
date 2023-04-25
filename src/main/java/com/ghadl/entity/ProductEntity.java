@@ -32,6 +32,8 @@ public class ProductEntity {
 	@Lob
 	@Column(name = "product_image", length = 1000)
 	private byte[] image;
+	
+	public ProductEntity() {}
 
 	public ProductEntity(Long id, String name, String description, Double price, byte[] image) {
 		this.id = id;

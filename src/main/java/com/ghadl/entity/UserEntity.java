@@ -12,7 +12,6 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "user")
 public class UserEntity {
 
@@ -30,6 +29,8 @@ public class UserEntity {
 	@Column(name = "password_user", nullable = false)
 	private String password;
 
+	public UserEntity() {}
+	
 	public UserEntity(Long id, String name, String email, String password) {
 		this.id = id;
 		this.name = name;
